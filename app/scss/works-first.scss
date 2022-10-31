@@ -1,0 +1,45 @@
+/*Works-first*/
+
+.works-first {
+
+  &__wrapper {
+    background-image: url(../images/works-first.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+
+  }
+
+  &__body {
+   position: absolute;
+   top: 280px;
+   right: 87px;
+   max-width: 273px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: #c0c0c0;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__img {
+    margin-right: 6px;
+  }
+}

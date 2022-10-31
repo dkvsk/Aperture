@@ -1,0 +1,32 @@
+/*Works*/
+
+.works {
+
+  &__wrapper {
+    background-image: url(../images/works.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+
+  }
+
+  &__body {
+   position: absolute;
+   top: 340px;
+   right: 80px;
+   max-width: 298px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: #c0c0c0;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+  }
+}
