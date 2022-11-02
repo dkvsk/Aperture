@@ -179,7 +179,7 @@ input.input-error::-ms-placeholder {
     left: 0;
     display: none;
     padding: 20px;
-    background-color: #db3138;
+    background-color: #646464;
     text-align: center;
   }
 }
@@ -199,9 +199,21 @@ input.input-error::-ms-placeholder {
 .header__item {
   margin-right: 32px;
 }
+@media only screen and (max-width: 991px) {
+  .header__item {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
 .header__item:nth-child(1) {
   margin-right: 56px;
   font-size: 13px;
+}
+@media only screen and (max-width: 991px) {
+  .header__item:nth-child(1) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 .header__btn {
   margin-right: 0;
@@ -226,6 +238,17 @@ input.input-error::-ms-placeholder {
   width: 580px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 767px) {
+  .intro {
+    width: 100%;
+    padding-bottom: 22px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .intro__container {
+    padding: 0 5px;
+  }
+}
 .intro__wrapper {
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
@@ -241,16 +264,31 @@ input.input-error::-ms-placeholder {
   text-align: center;
   margin-bottom: 2px;
 }
+@media only screen and (max-width: 767px) {
+  .intro__title {
+    font-size: 12px;
+  }
+}
 .intro__subtitle {
   font-size: 54px;
   text-align: center;
   color: #fff;
   margin-bottom: 18px;
 }
+@media only screen and (max-width: 767px) {
+  .intro__subtitle {
+    font-size: 35px;
+  }
+}
 .intro__content {
   position: absolute;
   content: "";
   top: 475px;
+}
+@media only screen and (max-width: 1440px) {
+  .intro__content {
+    top: 450px;
+  }
 }
 .intro__info {
   position: absolute;
@@ -258,6 +296,17 @@ input.input-error::-ms-placeholder {
   bottom: -653px;
   right: -420px;
   display: flex;
+}
+@media only screen and (max-width: 1440px) {
+  .intro__info {
+    right: -200px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .intro__info {
+    left: 71%;
+    transform: translateX(-70%);
+  }
 }
 .intro__item {
   display: flex;
@@ -272,12 +321,31 @@ input.input-error::-ms-placeholder {
 .intro__data {
   font-size: 12px;
 }
+.intro__text {
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .intro__text {
+    font-size: 11px;
+  }
+}
 
 /*About-us*/
 .about-us {
   background-color: #000000;
   padding-top: 120px;
   padding-bottom: 100px;
+}
+@media only screen and (max-width: 991px) {
+  .about-us {
+    padding-top: 100px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .about-us {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 .about-us__title {
   text-align: center;
@@ -295,14 +363,34 @@ input.input-error::-ms-placeholder {
   grid-template-columns: 576px 576px;
   grid-gap: 16px;
 }
+@media only screen and (max-width: 1340px) {
+  .about-us__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .about-us__content {
+    grid-template-columns: 1fr;
+  }
+}
 .about-us__item {
   position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .about-us__img {
+    width: 100%;
+  }
 }
 .about-us__body {
   position: absolute;
   bottom: 30px;
   left: 30px;
   max-width: 516px;
+}
+@media only screen and (max-width: 767px) {
+  .about-us__body {
+    max-width: 100%;
+  }
 }
 .about-us__head {
   text-transform: uppercase;
@@ -660,46 +748,34 @@ input.input-error::-ms-placeholder {
   margin-right: 0;
 }
 
+/*Burger*/
 .burger {
   display: none;
-  width: 30px;
-}
-.burger a {
-  display: block;
   cursor: pointer;
-  padding: 12px 0;
 }
-.burger a.active span {
-  background: transparent;
+@media only screen and (max-width: 991px) {
+  .burger {
+    display: block;
+  }
 }
-.burger a.active span:before {
-  transform: rotate(45deg) translate(5px, 6px);
+.burger.active .burger__line--top {
+  transform: rotate(45deg) translate(9px, -8px);
 }
-.burger a.active span:after {
-  transform: rotate(-45deg) translate(5px, -6px);
+.burger.active .burger__line--middle {
+  opacity: 0;
 }
-.burger a span {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 5px;
-  transition: all 0.2s ease-in-out;
-  background-color: #222;
+.burger.active .burger__line--bottom {
+  transform: rotate(-45deg) translate(-20px, -6px);
 }
-.burger a span:before, .burger a span:after {
-  content: "";
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  left: 0;
-  border-radius: 5px;
-  transition: all 0.2s ease-in-out;
-  background-color: #222;
+.burger__line {
+  width: 40px;
+  height: 3px;
+  fill: #646464;
+  transition: transform 300ms, opacity 300ms;
 }
-.burger a span:before {
-  top: -8px;
-}
-.burger a span:after {
-  top: 8px;
+.burger__line {
+  width: 40px;
+  height: 3px;
+  fill: #646464;
+  transition: transform 300ms, opacity 300ms;
 }

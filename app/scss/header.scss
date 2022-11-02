@@ -27,11 +27,13 @@
         left: 0;
         display: none;
         padding: 20px;
-        background-color: #db3138;
+        background-color: #646464;
+        ;
         text-align: center;
       }
     }
   }
+
   &__list {
     display: flex;
     align-items: center;
@@ -44,19 +46,24 @@
   &__link {
     font-size: 15px;
     color: #fff;
-
-    // &:first-child {
-    //   color: #000;
-    //   letter-spacing: 0.4px;
-    // }
   }
 
   &__item {
     margin-right: 32px;
 
+    @media only screen and (max-width: 991px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
     &:nth-child(1) {
       margin-right: 56px;
       font-size: 13px;
+
+      @media only screen and (max-width: 991px) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
     }
   }
 
