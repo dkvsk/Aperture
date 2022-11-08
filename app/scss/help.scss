@@ -3,7 +3,11 @@
 .help {
   height: 414px;
   background-color: #000;
-  padding: 113px 0 108px;
+  padding: 113px 0;
+
+  @media only screen and (max-width: 767px) {
+    padding: 50px 0;
+  }
 
   &__body {
     max-width: 571px;

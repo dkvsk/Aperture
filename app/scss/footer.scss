@@ -1,24 +1,40 @@
 /*Footer*/
 
 .footer {
-  height: 652px;
   background-color: #000;
   padding: 100px 0;
+
+  @media only screen and (max-width: 767px) {
+    padding: 50px 0;
+  }
 
   &__content {
     display: flex;
     justify-content: space-between;
     margin-bottom: 36px;
+
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+    }
   }
 
   &__menu {
     display: flex;
+
+    @media only screen and (max-width: 991px) {
+      margin-top: 36px;
+      justify-content: space-between;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     margin-right: 54px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__logo {
@@ -53,6 +69,17 @@
     padding: 36px 0;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
+
+    @media only screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__head {
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 36px;
+    }
   }
 
   &__btn {
@@ -61,6 +88,12 @@
     background: #f9fafb;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
+    height: 46px;
+
+    @media only screen and (max-width: 767px) {
+      width: 340px;
+    }
+    
 
     &::before {
       position: absolute;
@@ -75,13 +108,29 @@
   }
 
   &__info {
-    padding: 56px 0 1px 0;
+    padding: 56px 0;
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 767px) {
+      padding: 50px 0;
+      flex-direction: column;
+    }
+  }
+
+  &__copyrigth {
+    @media only screen and (max-width: 767px) {
+      text-align: center;
+      margin-bottom: 36px;
+    }
   }
 
   &__socials {
     display: flex;
+
+    @media only screen and (max-width: 767px) {
+      justify-content: center;
+    }
   }
 
   &__social {
@@ -91,6 +140,4 @@
       margin-right: 0;
     }
   }
-
 }
-

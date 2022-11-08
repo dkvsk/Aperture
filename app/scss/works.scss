@@ -1,21 +1,24 @@
 /*Works*/
 
 .works {
+  height: 600px;
 
   &__wrapper {
     background-image: url(../images/works.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
     position: relative;
-
   }
 
   &__body {
-   position: absolute;
-   top: 340px;
-   right: 80px;
-   max-width: 298px;
+    position: absolute;
+    top: 340px;
+    right: 80px;
+    max-width: 298px;
+
+    @media only screen and (max-width: 585px) {
+      right: 60px;
+    }
   }
 
   &__title {
@@ -28,5 +31,22 @@
     bottom: 40px;
     right: 40px;
     display: flex;
+  }
+
+  &__item {
+    display: flex;
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__img {
+    margin-right: 6px;
+  }
+
+  &__data {
+    font-size: 12px;
   }
 }
